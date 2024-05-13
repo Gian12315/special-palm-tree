@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:flexDirection="column"
-    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+    android:theme="@style/Theme.Depressiopronto"
     app:justifyContent="space_around"
-    android:background="@color/blue_20"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-
+<com.google.android.flexbox.FlexboxLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:flexDirection="column"
+    app:justifyContent="space_around">
     <com.google.android.flexbox.FlexboxLayout
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
@@ -30,10 +25,12 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/button"
+            android:inputType="text"
+            android:autofillHints=""
             android:padding="10dp"
             android:layout_marginBottom="20dp"
-            android:hint="Tap to Speak"
+            android:hint="@string/tap_to_speak"
+            android:textColor="@color/black"
             android:id="@+id/text"
             android:layout_centerInParent="true"
             />
@@ -41,8 +38,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Record"
-            android:backgroundTint="@color/green_20"
+            android:text="@string/record"
+            android:backgroundTint="@color/blue_70"
             android:id="@+id/button"/>
 
     </com.google.android.flexbox.FlexboxLayout>
@@ -55,7 +52,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:id="@+id/humidity"/>
     </com.google.android.flexbox.FlexboxLayout>
 
@@ -66,8 +66,11 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Send"
-            android:backgroundTint="@color/green_20"
+            android:text="@string/send"
+            android:backgroundTint="@color/blue_70"
             android:id="@+id/ttsButton"/>
     </com.google.android.flexbox.FlexboxLayout>
 </com.google.android.flexbox.FlexboxLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

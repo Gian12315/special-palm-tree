@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Depressiopronto</string>
+    <string name="tap_to_speak">Pulsa para hablar</string>
+    <string name="record">Grabar</string>
+    <string name="send">Enviar</string>
+    <string name="export">Exportar</string>
+</resources>

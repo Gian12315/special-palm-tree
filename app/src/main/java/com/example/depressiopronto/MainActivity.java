@@ -30,6 +30,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentManager;
 import androidx.room.Room;
 
 import com.android.volley.Request;
@@ -150,7 +151,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInit(int status) {
                 if(status != TextToSpeech.ERROR) {
-                    t1.setLanguage(Locale.ENGLISH);
+                    //t1.setLanguage(Locale.ENGLISH);
+                    t1.setLanguage(Locale.forLanguageTag("es"));
+
+
                 }
             }
         });
